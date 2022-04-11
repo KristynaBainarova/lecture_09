@@ -20,10 +20,22 @@ def read_data(file_name, field):
         return None
     return data[field]
 
+def linear_search(sequence, number):
+    search_res = {"positions":[], "count":0}
+    for index, value in enumerate(sequence): #oindexuje sequenci
+        if value == number:
+            search_res["positions"].append(index)
+            search_res["count"] += 1
+    return search_res #vrací celý slovnik
+
+
+
 
 def main():
     sequential_data = read_data("sequential.json", "unordered_numbers")
     print(sequential_data)
+    results = linear_search(sequential_data, 0) #zjišťuje kde jsou nuly
+    print(results)
     pass
 
 
