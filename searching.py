@@ -33,6 +33,8 @@ def main():
     print(sequential_data)
     results = linear_search(sequential_data, 0) #zjišťuje kde jsou nuly
     print(results)
+    dna_sequence = read_data("sequential.json", "dna_sequence")
+    print(dna_sequence)
     binary = binary_search("sequential.json", "ordered_numbers")
     print(binary)
     pass
@@ -41,7 +43,7 @@ def pattern_search(sequence, pattern):
     positions = set() #vytvoření množiny
     index = 0
     while index < len(sequence) - len(pattern):#pokračujeme až do konce znaků
-        if sequence[index:index + len(pattern)] == pattern #je to shodne se vzorem?
+        if sequence[index:index + len(pattern)] == pattern: #je to shodne se vzorem?
             positions.add(index) #metoda add protože se jedná o množiny
             index = index + 1
         return positions
