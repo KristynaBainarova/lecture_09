@@ -2,7 +2,7 @@ import os
 
 # get current working directory path
 cwd_path = os.getcwd()
-
+# git gui je alternativa příkazů
 
 def read_data(file_name, field):
     """
